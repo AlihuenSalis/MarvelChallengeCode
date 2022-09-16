@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ChallengeCode</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="chacarter_detail_img">img_character_detail</string>
+    <string name="title_character_detail">APPEARS IN THESE COMICS</string>
+    <string name="toolbar_title_character_detail">Character name</string>
+</resources>
