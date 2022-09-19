@@ -6,4 +6,17 @@
     <string name="chacarter_detail_img">img_character_detail</string>
     <string name="title_character_detail">APPEARS IN THESE COMICS</string>
     <string name="toolbar_title_character_detail">Character name</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="txt_remember_me">Recuérdame</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="prompt_username">Usuario</string>
+    <string name="welcome">BIENVENIDO</string>
+    <string name="action_sign_up">Registrar</string>
+    <string name="facebook">Facebook</string>
+
+    <string name="facebook_app_id">783982796266502</string>
+    <string name="fb_login_protocol_scheme">fb783982796266502</string>
+    <string name="facebook_client_token">56789</string>
+
+    <string name="prefs_file">challenge.conf.PREFERENCE_FILE_KEY</string>
 </resources>
