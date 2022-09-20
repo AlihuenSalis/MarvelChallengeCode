@@ -4,7 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="chacarter_detail_img">img_character_detail</string>
-    <string name="title_character_detail">APPEARS IN THESE COMICS</string>
+    <string name="title_character_detail">APARECE EN ESTOS COMICS</string>
     <string name="toolbar_title_character_detail">Character name</string>
     <string name="action_sign_in">Ingresar</string>
     <string name="txt_remember_me">Recuérdame</string>
@@ -24,4 +24,5 @@
     <string name="txt_marvel_challenge">Marvel Challenge</string>
     <string name="characterTitle">Personajes</string>
     <string name="eventTitle">Eventos</string>
+    <string name="img_exit_toolbar">exit toolbar btn</string>
 </resources>

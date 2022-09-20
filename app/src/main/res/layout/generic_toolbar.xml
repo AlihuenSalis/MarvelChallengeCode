@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_close"
             android:visibility="gone"
-            tools:visibility="visible" />
+            tools:visibility="visible"
+            android:contentDescription="@string/img_exit_toolbar" />
     </androidx.appcompat.widget.Toolbar>
 
 </LinearLayout>
