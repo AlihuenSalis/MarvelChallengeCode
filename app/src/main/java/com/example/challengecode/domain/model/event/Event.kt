@@ -1,5 +1,6 @@
 package com.example.challengecode.domain.model.event
 
+import com.example.challengecode.domain.model.character.Comic
 import com.example.challengecode.domain.model.character.Thumbnail
 
 data class Event(
@@ -11,5 +12,7 @@ data class Event(
     val modified: String,
     val start: String,
     val end: String,
-    val thumbnail: Thumbnail
+    val thumbnail: Thumbnail,
+    var comics: Comic,
+    var showingComics: Boolean = false
 )

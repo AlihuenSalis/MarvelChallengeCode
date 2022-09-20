@@ -4,15 +4,32 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.26992753623188404" />
+        <entry key="app/src/main/res/drawable/border_line.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/ic_calendar_colored.xml" value="0.271" />
+        <entry key="app/src/main/res/drawable/ic_calendar_white.xml" value="0.271" />
+        <entry key="app/src/main/res/drawable/ic_character.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/ic_character_colored.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/ic_down_arrow_black.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2" />
+        <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.271" />
+        <entry key="app/src/main/res/drawable/ic_person.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/ic_up_arrow_black.xml" value="0.3255" />
         <entry key="app/src/main/res/drawable/rounded_border.xml" value="0.31" />
+        <entry key="app/src/main/res/drawable/rounded_shape_background.xml" value="0.3255" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/dialog_character_detail.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_character.xml" value="0.3265625" />
         <entry key="app/src/main/res/layout/fragment_character_detail.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/fragment_event.xml" value="0.3265625" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/generic_toolbar.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/item_character_comics.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/item_character_list.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/item_event_list.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/rv_character_list.xml" value="0.32864583333333336" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.3296875" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.271" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.31" />
       </map>
     </option>

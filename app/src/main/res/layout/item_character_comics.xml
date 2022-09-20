@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/normal_margin"
-        android:layout_marginStart="@dimen/standard_margin"
-        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/dividerItemMargin"
+        android:layout_marginEnd="@dimen/dividerItemMargin"
         android:layout_marginBottom="@dimen/standard_margin"
         android:gravity="start"
         android:textColor="@color/black"
@@ -20,15 +20,23 @@
         tools:text="Iron man (1968) #5" />
 
     <TextView
-        android:id="@+id/txt_sub_title1"
+        android:id="@+id/txt_character_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/standard_margin"
-        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/dividerItemMargin"
+        android:layout_marginEnd="@dimen/dividerItemMargin"
+        android:layout_marginBottom="@dimen/dividerItemMargin"
         android:gravity="start"
         android:textSize="@dimen/second_title_text"
         android:textStyle="normal"
         tools:text="1995" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/dividerItemMargin"
+        android:background="@color/secondary_white"
+        android:layout_marginBottom="@dimen/item_decoration"/>
 
 
 </LinearLayout>
