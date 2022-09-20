@@ -14,14 +14,9 @@ import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+class CharacterViewModel @Inject constructor(
     private val getCharactersUC: GetCharacterListUC
 ) : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
 
     val isLoading: MutableLiveData<Boolean> = MutableLiveData()
     val characterList: MutableLiveData<CharacterResponse> = MutableLiveData()

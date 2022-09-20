@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.challengecode.domain.model.character.CharacterResponse
+import com.example.challengecode.domain.model.event.Event
 import com.example.challengecode.domain.model.event.EventResponse
 import com.example.challengecode.domain.usesCase.GetEventsUC
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,14 +16,14 @@ import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
-class DashboardViewModel @Inject constructor(
+class EventViewModel @Inject constructor(
     private val getEventsUC: GetEventsUC
 ) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
-    }
-    val text: LiveData<String> = _text
+    val isLoading: MutableLiveData<Boolean> = MutableLiveData()
+    val eventList: MutableLiveData<EventResponse> = MutableLiveData()
+    val responseError: MutableLiveData<Boolean> = MutableLiveData()
+    var eventWithVisibleComics: Event? = null
 
     fun getEvents(hash: String) {
         viewModelScope.launch {
@@ -31,10 +32,15 @@ class DashboardViewModel @Inject constructor(
             response.enqueue(object : Callback<EventResponse> {
                 override fun onResponse(call: Call<EventResponse>, response: Response<EventResponse>) {
                     println("RESPONSE OK= $response")
+                    eventList.postValue(response.body())
+                    isLoading.postValue(false)
+                    
                 }
 
                 override fun onFailure(call: Call<EventResponse>, t: Throwable) {
                     println("RESPONSE ERROR = ${t.message}")
+                    responseError.postValue(false)
+                    isLoading.postValue(false)
                 }
 
             })

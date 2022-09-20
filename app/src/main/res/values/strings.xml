@@ -19,4 +19,9 @@
     <string name="facebook_client_token">56789</string>
 
     <string name="prefs_file">challenge.conf.PREFERENCE_FILE_KEY</string>
+    <string name="comics_to_discuss">COMICS TO DISCUSS</string>
+    <string name="toDefine">A definir</string>
+    <string name="txt_marvel_challenge">Marvel Challenge</string>
+    <string name="characterTitle">Personajes</string>
+    <string name="eventTitle">Eventos</string>
 </resources>

@@ -64,10 +64,10 @@ class CharacterDetailDialog(private val character: Character) : DialogFragment()
 
     private fun initRecycler() {
         val manager = LinearLayoutManager(requireContext())
-        val decoration = DividerItemDecoration(requireContext(), manager.orientation)
+//        val decoration = DividerItemDecoration(requireContext(), manager.orientation)
         binding.rvCharacterComics.layoutManager = manager
         val adapter = CharacterComicsAdapter(character.comics.items)
         binding.rvCharacterComics.adapter = adapter
-        binding.rvCharacterComics.addItemDecoration(decoration)
+//        binding.rvCharacterComics.addItemDecoration(decoration)
     }
 }

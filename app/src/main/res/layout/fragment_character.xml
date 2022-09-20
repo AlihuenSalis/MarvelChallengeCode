@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.fragments.HomeFragment">
+    android:background="@color/secondary_white"
+    tools:context=".ui.view.fragments.CharacterFragment">
 
     <ProgressBar
         android:id="@+id/progressBarCharacters"
@@ -21,7 +22,6 @@
         android:id="@+id/rv_characters"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/standard_margin"
         android:visibility="visible"
         tools:listitem="@layout/item_character_list"/>
 
