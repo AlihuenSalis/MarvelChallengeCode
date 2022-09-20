@@ -72,8 +72,7 @@
         <item name="fontFamily">sans-serif</item>
     </style>
 
-    <style name="TextTypeDescription" parent="TextTypeRegular">
-        <item name="fontFamily">sans-serif</item>
+    <style name="TextTypeDescription" parent="TextTypeCondensed">
         <item name="android:textSize">@dimen/desc_text</item>
     </style>
 </resources>

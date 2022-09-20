@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/character_detail_toolbar"
@@ -26,66 +21,86 @@
             app:title="@string/toolbar_title_character_detail"
             app:titleTextColor="@color/white" />
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
-            android:orientation="vertical"
-            android:layout_gravity="top"
-            android:gravity="top">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/character_detail_toolbar">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_character"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:contentDescription="@string/chacarter_detail_img"
-                tools:src="@drawable/ic_person" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:clipChildren="true">
 
-        <LinearLayout
+                <ImageView
+                    android:id="@+id/img_character"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/txt_description"
+                    style="@style/TextTypeRegular"
+                    android:layout_marginHorizontal="@dimen/start_end_detail_margin"
+                    android:layout_marginTop="24dp"
+                    tools:text="Esto es una descriocion de ejemplo"
+                    android:textSize="@dimen/second_title_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_character" />
+
+                <TextView
+                    android:id="@+id/txt_comics_in_appears"
+                    style="@style/TextTypeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/second_margin"
+                    android:layout_marginStart="@dimen/start_end_detail_margin"
+                    android:layout_marginEnd="@dimen/start_end_detail_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:gravity="center"
+                    android:text="@string/title_character_detail"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_text"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_description" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_character_comics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_comics_in_appears" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/txt_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/start_end_detail_margin"
-                android:layout_marginTop="@dimen/second_margin"
-                android:layout_marginEnd="@dimen/start_end_detail_margin"
-                android:layout_marginBottom="@dimen/normal_margin"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="@dimen/desc_text"
-                android:textStyle="normal"
-                android:visibility="visible"
-                tools:text="Esto es una descripcion para la imagen del character" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/start_end_detail_margin"
-                android:layout_marginEnd="@dimen/start_end_detail_margin"
-                android:layout_marginBottom="@dimen/standard_margin"
-                android:gravity="center"
-                android:text="@string/title_character_detail"
-                android:textColor="@color/black"
-                android:textSize="@dimen/title_text"
-                android:textStyle="normal" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_character_comics"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:listitem="@layout/item_character_comics" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+</LinearLayout>
 
 
-</ScrollView>
 
