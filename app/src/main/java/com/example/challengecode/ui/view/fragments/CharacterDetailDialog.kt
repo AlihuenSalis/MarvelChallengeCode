@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.challengecode.R
@@ -64,10 +63,8 @@ class CharacterDetailDialog(private val character: Character) : DialogFragment()
 
     private fun initRecycler() {
         val manager = LinearLayoutManager(requireContext())
-//        val decoration = DividerItemDecoration(requireContext(), manager.orientation)
         binding.rvCharacterComics.layoutManager = manager
         val adapter = CharacterComicsAdapter(character.comics.items)
         binding.rvCharacterComics.adapter = adapter
-//        binding.rvCharacterComics.addItemDecoration(decoration)
     }
 }

@@ -35,10 +35,11 @@ class Utils {
         }
     }
 
-    fun setDate(date: String?, context: Context) : String {
+    fun setDate(date: String?, context: Context): String {
         var formatDate = ""
-         date?.let {
-            val parsedDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+        date?.let {
+            val parsedDate =
+                LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
             val year = parsedDate.year
             val day = parsedDate.dayOfMonth
             val month = monthToString(parsedDate.month.value)
