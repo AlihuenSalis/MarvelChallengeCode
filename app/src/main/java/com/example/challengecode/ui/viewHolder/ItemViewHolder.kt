@@ -6,11 +6,11 @@ import com.example.challengecode.databinding.ItemCharacterComicsBinding
 import com.example.challengecode.databinding.ItemCharacterListBinding
 import com.example.challengecode.domain.model.character.Item
 
-class ItemViewHolder(view: View): RecyclerView.ViewHolder(view) {
+class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    val binding = ItemCharacterComicsBinding.bind(view)
+    private val binding = ItemCharacterComicsBinding.bind(view)
 
-    fun render (item: Item) {
+    fun render(item: Item) {
         binding.txtTitleComic.text = item.name
-        }
+    }
 }

@@ -20,7 +20,7 @@ class CharacterViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         binding.txtNameCharacter.text = character.name
         binding.txtDescription.text = character.description
         binding.cvItems.setOnClickListener {
-           onClickListener(character)
+            onClickListener(character)
         }
     }
 }

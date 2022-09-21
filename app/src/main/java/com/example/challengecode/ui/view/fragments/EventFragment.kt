@@ -68,17 +68,6 @@ class EventFragment : Fragment() {
         binding.rvEvents.layoutManager = manager
         eventAdapter = EventsAdapter(eventList) {eventClicked ->
             eventAdapter.updatedItems(changeExpandedEvent(eventClicked))
-            var scrollToPositionEnabled = true
-            eventAdapter.postFillRecycler = {showingComicsEvent ->
-                if (scrollToPositionEnabled) {
-                    scrollToPositionEnabled = false
-                    binding.rvEvents.scrollToPosition(
-                        eventAdapter.list.indexOf(
-                            showingComicsEvent
-                        )
-                    )
-                }
-            }
         }
         binding.rvEvents.adapter = eventAdapter
         binding.rvEvents.addItemDecoration(

@@ -27,9 +27,6 @@ class MainActivity : AppCompatActivity() {
     private val eventsIcons =
         ArrayList<Int>(listOf(R.drawable.ic_calendar_white, R.drawable.ic_calendar_colored))
 
-    private var loadingStateCount: Int = 0
-    var loadingStateVisible: Boolean = false
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -37,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initUi()
-
 
         // Setup
         val bundle = intent.extras

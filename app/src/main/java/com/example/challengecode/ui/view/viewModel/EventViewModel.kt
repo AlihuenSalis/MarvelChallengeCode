@@ -30,11 +30,14 @@ class EventViewModel @Inject constructor(
             val response = getEventsUC(hash)
 
             response.enqueue(object : Callback<EventResponse> {
-                override fun onResponse(call: Call<EventResponse>, response: Response<EventResponse>) {
+                override fun onResponse(
+                    call: Call<EventResponse>,
+                    response: Response<EventResponse>
+                ) {
                     println("RESPONSE OK= $response")
                     eventList.postValue(response.body())
                     isLoading.postValue(false)
-                    
+
                 }
 
                 override fun onFailure(call: Call<EventResponse>, t: Throwable) {

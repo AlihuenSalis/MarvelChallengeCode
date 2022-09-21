@@ -28,8 +28,11 @@ class CharacterViewModel @Inject constructor(
 
             val response = getCharactersUC(hash)
 
-            response.enqueue(object :Callback<CharacterResponse>{
-                override fun onResponse(call: Call<CharacterResponse>, response: Response<CharacterResponse>) {
+            response.enqueue(object : Callback<CharacterResponse> {
+                override fun onResponse(
+                    call: Call<CharacterResponse>,
+                    response: Response<CharacterResponse>
+                ) {
                     println("RESPONSE OK= $response")
                     characterList.postValue(response.body())
                     isLoading.postValue(false)

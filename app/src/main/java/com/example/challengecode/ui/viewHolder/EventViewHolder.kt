@@ -11,12 +11,12 @@ import com.example.challengecode.domain.model.event.Event
 import com.example.challengecode.ui.adapter.CharacterComicsAdapter
 import com.example.challengecode.utils.Utils
 
-class EventViewHolder(view: View): RecyclerView.ViewHolder(view) {
+class EventViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     val binding = ItemEventListBinding.bind(view)
     val utils = Utils()
 
-    fun render (event: Event, position: Int, onClickListener: (Event) -> Unit) {
+    fun render(event: Event, position: Int, onClickListener: (Event) -> Unit) {
         Glide.with(binding.eventImage.context)
             .load(event.thumbnail.path + ".${event.thumbnail.extension}")
             .error(R.drawable.ic_person)
@@ -30,7 +30,7 @@ class EventViewHolder(view: View): RecyclerView.ViewHolder(view) {
             binding.comicsRecyclerView.layoutManager = manager
             val itemAdapter = CharacterComicsAdapter(event.comics.items)
             binding.comicsRecyclerView.adapter = itemAdapter
-            if (event.showingComics){
+            if (event.showingComics) {
                 binding.comicsRecyclerView.isVisible = false
                 binding.tvComicsToDebate.isVisible = false
                 binding.showingComicsImageView.setImageResource(R.drawable.ic_down_arrow_black)
